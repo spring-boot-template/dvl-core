@@ -256,8 +256,8 @@ public class Stat implements Comparable<Stat> {
 	@Override
 	public int compareTo(Stat o) {
 		return Comparator//
-				.comparingLong(Stat::getTotal).reversed() //
-				.thenComparingLong(Stat::getCount).reversed() //
+				.comparingLong(Stat::getCount) //
+				.thenComparingLong(Stat::getTotal) //
 				.thenComparingDouble(Stat::avg).reversed() //
 				.thenComparingDouble(Stat::getMax).reversed() //
 				.thenComparingDouble(Stat::getMin).reversed() //
